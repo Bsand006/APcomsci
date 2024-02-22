@@ -1,6 +1,7 @@
 package p1;
 
 public class Matrix {
+
 	double m[][];
 
 	public Matrix(int rows, int cols) {
@@ -30,6 +31,20 @@ public class Matrix {
 	}
 
 	public static Matrix add(Matrix a, Matrix b) {
-		int r1 = a.m[m.length][];
+
+		double[][] m1 = a.m;
+		double[][] m2 = b.m;
+
+		for (int i = 0; i < m1[i][m1.length]; i++) {
+			for (int j = 0; j < m1[i][j]; j++) {
+				if (i <= m2[m2.length][i] && j <= m2[j][m2.length]) {
+					m1[i][j] += m2[i][j];
+				}
+			}
+		}
+
+		a.m = m1;
+
+		return a;
 	}
 }
